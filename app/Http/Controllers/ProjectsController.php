@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\Events\ProjectCreated;
 
 class ProjectsController extends Controller
 {
@@ -26,6 +27,8 @@ class ProjectsController extends Controller
 		$attributes['owner_id'] = auth()->id();
 
 		Project::create($attributes);
+
+		// event(new ProjectCreated($project));
 
 		return redirect('/projects');
 	}

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\ProjectCreated;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
@@ -11,7 +12,20 @@ class Project extends Model
 //		'description'
 //	];
 
+	protected $dispatchesEvents = [
+		'created' => ProjectCreated::class
+	];
+
 	protected $guarded = [];
+
+	protected static function boot()
+	{
+		parent::boot();
+
+		static::created(function($project) {
+			// event on Project created
+		});
+	}
 
     public function tasks()
 	{
@@ -21,5 +35,10 @@ class Project extends Model
 	public function addTask($task)
 	{
 		$this->tasks()->create($task);
+	}
+
+	public function owner()
+	{
+		$this->belongsTo(User::class);
 	}
 }
