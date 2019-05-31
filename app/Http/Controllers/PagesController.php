@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\SubscriptionRenewalFailed;
 use Illuminate\Http\Request;
+use App\User;
 
 class PagesController extends Controller
 {
@@ -21,5 +23,14 @@ class PagesController extends Controller
 	public function contact()
 	{
 		return view('contact');
+	}
+
+	public function test()
+	{
+		$user = User::first();
+
+		$user->notify(new SubscriptionRenewalFailed());
+
+		echo 'wearein';
 	}
 }
