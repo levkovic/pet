@@ -14,17 +14,14 @@ class ProjectsController extends Controller
 
 	public function index()
 	{
-		$projects = Project::where('owner_id', auth()->id())->get();
+		$projects = auth()->user()->projects;
 
 		return view('projects.index', compact('projects'));
 	}
 
 	public function store()
 	{
-		$attributes = request()->validate([
-			'title' => 'required',
-			'description' => 'required'
-		]);
+		$attributes = $this->validateProject();
 
 		$attributes['owner_id'] = auth()->id();
 
@@ -62,5 +59,14 @@ class ProjectsController extends Controller
 	public function edit(Project $project)
 	{
 		return view('projects.edit', compact('project'));
+	}
+
+	protected function validateProject()
+	{
+
+		return request()->validate([
+			'title' => ['required', 'min:3'],
+			'description' => 'required'
+		]);
 	}
 }
