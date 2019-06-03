@@ -13,9 +13,9 @@
 
 Route::get('/test', 'PagesController@test');
 
-Route::get('/', 'PagesController@home');
+Route::get('/{any?}', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
-Route::get('/about', 'PagesController@about');
+// Route::get('/about', 'PagesController@about');
 Route::get('/game', 'GameController@index');
 
 Route::resource('projects', 'ProjectsController');

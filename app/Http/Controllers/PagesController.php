@@ -8,6 +8,11 @@ use App\User;
 
 class PagesController extends Controller
 {
+	public function index()
+	{
+		return view('app');
+	}
+
     public function home()
 	{
 		return view('welcome',[
