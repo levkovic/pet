@@ -1,18 +1,19 @@
-import Home from './components/Home';
-import About from './components/About';
+import Logo from './components/Logo';
+import LogoSymbol from './components/LogoSymbol';
 
 export default {
 	mode: 'history',
 
+	linkActiveClass: "font-bold",
+
 	routes: [
 		{
 			path: '/',
-			component: Home
+			component: Logo
 		},
 		{
-			path: '/about',
-			component: About,
-			name: 'about'
+			path: '/logo-symbol',
+			component: LogoSymbol
 		},
 	]
 }
