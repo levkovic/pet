@@ -2,6 +2,13 @@
 
 Route::get('/{any}', 'PagesController@index')->where('any', '.*');
 
+Route:: get('/api/stats', function () {
+    return json_encode([
+        'total' => 200,
+        'current' => 50
+    ]);
+});
+
 Route::get('/test', 'PagesController@test');
 
 Route::get('/contact', 'PagesController@contact');

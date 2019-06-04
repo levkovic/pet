@@ -4,8 +4,9 @@ import NotFound from './components/NotFound';
 import Colors from './components/Colors';
 import Mascot from './components/Mascot';
 import Illustrations from './components/Illustrations';
+import SiteStats from './components/SiteStats';
 
-let LoadersAndAnimations = () => import('./components/LoadersAndAnimations');
+let LoadersAndAnimations = () => import(/* webpackChunkName: "loaders-and-animations.bundle" */ './components/LoadersAndAnimations');
 
 export default {
 	mode: 'history',
@@ -40,6 +41,10 @@ export default {
 		{
 			path: '/loadersandanimations',
 			component: LoadersAndAnimations
-		}
+		},
+        {
+            path: '/site-stats',
+            component: SiteStats
+        }
 	]
 }

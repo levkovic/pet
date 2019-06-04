@@ -35,6 +35,13 @@
 								<li class="text-sm pb-4"><router-link class="text-black" to="/loadersandanimations">Loaders and Animations</router-link></li>
 							</ul>
 						</section>
+
+                        <section>
+                            <h5 class="uppercase font-bold mb-3 text-base">Stats</h5>
+                            <ul>
+                                <li class="text-sm pb-4"><router-link class="text-black" to="/site-stats">Site Stats</router-link></li>
+                            </ul>
+                        </section>
 					</aside>
 
 					<div class="primary">
