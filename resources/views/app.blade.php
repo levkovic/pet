@@ -21,15 +21,15 @@
 							<ul>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/" exact>Logo</router-link></li>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/logo-symbol">Logo Symbol</router-link></li>
-								<li class="text-sm pb-4"><router-link class="text-black" to="/logo-symbol">Colors</router-link></li>
+								<li class="text-sm pb-4"><router-link class="text-black" to="/colors">Colors</router-link></li>
 							</ul>
 						</section>
 
 						<section>
 							<h5 class="my -4">Doodles</h5>
 							<ul>
-								<li class="text-sm pb-4"><router-link class="text-black" to="/">Mascot</router-link></li>
-								<li class="text-sm pb-4"><router-link class="text-black" to="/logo-symbol">Illustrations</router-link></li>
+								<li class="text-sm pb-4"><router-link class="text-black" to="/mascot">Mascot</router-link></li>
+								<li class="text-sm pb-4"><router-link class="text-black" to="/illustrations">Illustrations</router-link></li>
 							</ul>
 						</section>
 					</aside>
