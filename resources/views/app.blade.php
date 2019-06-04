@@ -32,6 +32,7 @@
 							<ul>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/mascot">Mascot</router-link></li>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/illustrations">Illustrations</router-link></li>
+								<li class="text-sm pb-4"><router-link class="text-black" to="/loadersandanimations">Loaders and Animations</router-link></li>
 							</ul>
 						</section>
 					</aside>

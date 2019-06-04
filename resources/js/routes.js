@@ -5,6 +5,8 @@ import Colors from './components/Colors';
 import Mascot from './components/Mascot';
 import Illustrations from './components/Illustrations';
 
+let LoadersAndAnimations = () => import('./components/LoadersAndAnimations');
+
 export default {
 	mode: 'history',
 
@@ -34,6 +36,10 @@ export default {
 		{
 			path: '/illustrations',
 			component: Illustrations
+		},
+		{
+			path: '/loadersandanimations',
+			component: LoadersAndAnimations
 		}
 	]
 }
