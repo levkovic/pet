@@ -9,15 +9,17 @@
 	</head>
 	<body class="font-sans">
 		<div id="app">
-			<div class="container mx-auto">
-				<header class="py-6">
-					<h1>Here we go</h1>
+			<div class="container px-8">
+				<header class="py-6" style="background: url('/images/splash.svg') no-repeat">
+					<h1>
+						<img src="/images/logo.svg" alt="Pet">
+					</h1>
 				</header>
 
 				<main class="flex">
-					<aside class="w-1/5">
-						<section>
-							<h5 class="mb-4">Brand</h5>
+					<aside class="w-1/5  pt-8">
+						<section class="mb-10">
+							<h5 class="uppercase font-bold mb-3 text-base">Brand</h5>
 							<ul>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/" exact>Logo</router-link></li>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/logo-symbol">Logo Symbol</router-link></li>
@@ -26,7 +28,7 @@
 						</section>
 
 						<section>
-							<h5 class="my -4">Doodles</h5>
+							<h5 class="uppercase font-bold mb-3 text-base">Doodles</h5>
 							<ul>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/mascot">Mascot</router-link></li>
 								<li class="text-sm pb-4"><router-link class="text-black" to="/illustrations">Illustrations</router-link></li>
