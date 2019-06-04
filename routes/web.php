@@ -13,7 +13,7 @@
 
 Route::get('/test', 'PagesController@test');
 
-Route::get('/{any?}', 'PagesController@index');
+Route::get('/{any}', 'PagesController@index')->where('any', '.*');
 Route::get('/contact', 'PagesController@contact');
 // Route::get('/about', 'PagesController@about');
 Route::get('/game', 'GameController@index');
